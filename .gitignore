@@ -1,4 +1,5 @@
-bundle
 autoload
 doc
-plugin/*
+plugin
+bundle
+!bundle/Vundle.vim
