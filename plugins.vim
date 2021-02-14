@@ -15,7 +15,6 @@ Plugin 'itchyny/lightline.vim'
 "Plug 'morhetz/gruvbox'
 " Functional
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'dhruvasagar/vim-dotoo'
 " Language C++/glsl
@@ -41,8 +40,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" NerdTree
-nnoremap <C-o> :NERDTreeToggle<CR>
 " Tab completion
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"

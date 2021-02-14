@@ -90,5 +90,7 @@ hi CursorLine ctermbg=8 guibg=#404040
 hi Cursor ctermbg=15 
 " set spellcheck
 set spell
+" Remap Lex
+nnoremap <C-o> :Lex<CR>
 " Load Plugins
 so ~/.vim/plugins.vim
