@@ -88,6 +88,7 @@ set cursorline
 hi clear CursorLine
 hi CursorLine ctermbg=8 guibg=#404040
 hi Cursor ctermbg=15 
-
+" set spellcheck
+set spell
 " Load Plugins
 so ~/.vim/plugins.vim
