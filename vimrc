@@ -91,6 +91,6 @@ hi Cursor ctermbg=15
 " set spellcheck
 set spell
 " Remap Lex
-nnoremap <C-o> :Lex<CR>
+nnoremap <C-n> :Lex<CR>
 " Load Plugins
 so ~/.vim/plugins.vim
