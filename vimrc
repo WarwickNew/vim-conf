@@ -37,7 +37,11 @@ augroup vimrcEx
   au!
 
   " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+  "autocmd FileType text setlocal textwidth=78
+  autocmd FileType dotoo,org,tex,text setlocal textwidth=80
+  autocmd FileType dotoo,org,tex,text setlocal spell spelllang=en_gb
+
+
 augroup END
 
 " Add optional packages.
@@ -89,7 +93,7 @@ hi clear CursorLine
 hi CursorLine ctermbg=8 guibg=#404040
 hi Cursor ctermbg=15 
 " set spellcheck
-set spell
+"set spell
 " Remap Lex
 nnoremap <C-n> :Lex<CR>
 " Load Plugins

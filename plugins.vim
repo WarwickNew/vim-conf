@@ -13,10 +13,15 @@ Plugin 'VundleVim/Vundle.vim'
 " Pretty
 Plugin 'itchyny/lightline.vim'
 "Plug 'morhetz/gruvbox'
+Plugin 'ShowTrailingWhitespace'
+Plugin 'Yggdroot/indentLine'
+
 " Functional
+Plugin 'tpope/vim-fugitive'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 Plugin 'dhruvasagar/vim-dotoo'
+Plugin 'sheerun/vim-polyglot'
 " Language C++/glsl
 "Plugin 'ycm-core/YouCompleteMe'
 Plugin 'prabirshrestha/vim-lsp'
@@ -77,4 +82,19 @@ augroup lsp_install
     au!
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
+" GLSL
+autocmd! BufNewFile,BufRead *.vs,*.fs,*.glsl,*.frag,*.vert set ft=glsl
+
+" dotoo
+let g:dotoo#agenda#files = ['~/org/*.org']
+let g:dotoo#capture#refile = expand('~/org/refile.org')
+autocmd! BufNewFile,BufRead *.org set filetype=dotoo
+augroup dotoo
+    autocmd! 
+    autocmd BufNewFile,BufRead *.org *.dotoo set hidden
+    autocmd FileType dotoo,org,tex,text setlocal textwidth=80
+    autocmd FileType dotoo,org,tex,text setlocal spell spelllang=en_gb
+
 augroup END
