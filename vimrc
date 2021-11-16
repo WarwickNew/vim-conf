@@ -95,7 +95,10 @@ hi CursorLine ctermbg=8 guibg=#404040
 hi Cursor ctermbg=15
 " set spellcheck
 "set spell
-" Remap Lex
-nnoremap <C-n> :Lex<CR>
+
+" Leader mapping
+let mapleader = "\<Space>"
+nnoremap <Leader>? :echon " n :Lex \n l? lsp help (if implemented in buffer)"<CR>
+nnoremap <Leader>n :Lex<CR>
 " Load Plugins
 so ~/.vim/plugins.vim
