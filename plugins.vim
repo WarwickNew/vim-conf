@@ -62,8 +62,9 @@ function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
     if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> <Leader>l? :echon " ld lsp-definition \n ls lsp document symbol search \n lS lsp workspace symbol search \n lr lsp references \n li lsp implementation \n lt lsp  type definition \n lj lsp document diagnostics \n lrn lsp rename \n l[g lsp previous diagnostic \n l]g lsp next diagnostic \n lK lsp hover"<CR>
+    nmap <buffer> <Leader>l? :echon " ld lsp-definition \n lrf lsp document reformat \n ls lsp document symbol search \n lS lsp workspace symbol search \n lr lsp references \n li lsp implementation \n lt lsp  type definition \n lj lsp document diagnostics \n lrn lsp rename \n l[g lsp previous diagnostic \n l]g lsp next diagnostic \n lK lsp hover"<CR>
     nmap <buffer> <leader>ld <plug>(lsp-definition)
+    nmap <buffer> <leader>lrf <plug>(lsp-document-reformat)
     nmap <buffer> <leader>ls <plug>(lsp-document-symbol-search)
     nmap <buffer> <leader>lS <plug>(lsp-workspace-symbol-search)
     nmap <buffer> <leader>lr <plug>(lsp-references)
