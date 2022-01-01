@@ -96,7 +96,11 @@ hi Cursor ctermbg=15
 " set spellcheck
 "set spell
 
-" Leader mapping
+" Make reading easier
+set wrap linebreak nolist
+:set concealcursor=""
+
+"Leader mapping
 let mapleader = "\<Space>"
 nnoremap <Leader>? :echon " n :Lex \n l? lsp help (if implemented in buffer)"<CR>
 nnoremap <Leader>n :Lex<CR>

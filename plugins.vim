@@ -20,7 +20,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
-Plugin 'dhruvasagar/vim-dotoo'
+"Plugin 'dhruvasagar/vim-dotoo'
+Plugin 'vimwiki/vimwiki'
 Plugin 'sheerun/vim-polyglot'
 " Language C++/glsl
 "Plugin 'ycm-core/YouCompleteMe'
@@ -108,13 +109,14 @@ endif
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.glsl,*.frag,*.vert set ft=glsl
 
 " dotoo
-let g:dotoo#agenda#files = ['~/org/*.org']
-let g:dotoo#capture#refile = expand('~/org/refile.org')
-autocmd! BufNewFile,BufRead *.org set filetype=dotoo
-augroup dotoo
-    autocmd! 
-    autocmd BufNewFile,BufRead *.org *.dotoo set hidden
-    autocmd FileType dotoo,org,tex,text setlocal textwidth=80
-    autocmd FileType dotoo,org,tex,text setlocal spell spelllang=en_gb
-
-augroup END
+"set hidden
+"let g:dotoo#agenda#files = ['~/Dropbox/org/*.org']
+"let g:dotoo#capture#refile = expand('~/Dropbox/org/refile.org')
+"autocmd! BufNewFile,BufRead *.org set filetype=dotoo
+"augroup dotoo
+"    autocmd!
+"    autocmd BufNewFile,BufRead *.org *.dotoo set hidden
+"    autocmd FileType dotoo,org,tex,text setlocal textwidth=80
+"    autocmd FileType dotoo,org,tex,text setlocal spell spelllang=en_gb
+"
+"augroup END
