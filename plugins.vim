@@ -12,9 +12,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Pretty
 Plugin 'itchyny/lightline.vim'
-"Plug 'morhetz/gruvbox'
+Plugin 'morhetz/gruvbox'
 Plugin 'ShowTrailingWhitespace'
-Plugin 'Yggdroot/indentLine'
+"Plugin 'Yggdroot/indentLine'
 
 " Functional
 Plugin 'tpope/vim-fugitive'
@@ -30,7 +30,6 @@ Plugin 'mattn/vim-lsp-settings'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'tikhomirov/vim-glsl'
 
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -45,6 +44,17 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" Gruvbox colours
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
+set background=dark
+if has("termguicolors")
+    let g:gruvbox_termcolors=256
+else
+    let g:gruvbox_termcolors=16
+endif
+colorscheme gruvbox
 
 " Plugin leader mappings
 
@@ -78,7 +88,7 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> <leader>lK <plug>(lsp-hover)
 
     let g:lsp_format_sync_timeout = 1000
-    autocmd! BufWritePre *.rs,*.go,*.cpp,*.c,*.h,*.cs call execute('LspDocumentFormatSync')
+    autocmd! BufWritePre *.rs,*.go,*.cpp,*.c,*.h,*.cs,*.js,*.jsx,*.ts call execute('LspDocumentFormatSync')
 
     " refer to doc to add more commands
 endfunction
