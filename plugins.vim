@@ -118,15 +118,15 @@ endif
 " GLSL
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.glsl,*.frag,*.vert set ft=glsl
 
-" dotoo
-"set hidden
-"let g:dotoo#agenda#files = ['~/Dropbox/org/*.org']
-"let g:dotoo#capture#refile = expand('~/Dropbox/org/refile.org')
-"autocmd! BufNewFile,BufRead *.org set filetype=dotoo
-"augroup dotoo
-"    autocmd!
-"    autocmd BufNewFile,BufRead *.org *.dotoo set hidden
-"    autocmd FileType dotoo,org,tex,text setlocal textwidth=80
-"    autocmd FileType dotoo,org,tex,text setlocal spell spelllang=en_gb
-"
-"augroup END
+" Vimwiki
+" A little function to insert user input functionality into remaps
+function! TagSearch()
+    call inputsave()
+    let replacement = input('Enter Tag: ')
+    call inputrestore()
+    execute ':VimwikiSearchTags '.replacement
+    execute ':lopen'
+endfunction
+
+nmap <Leader>w? :echon " wts search-tags"<CR>
+autocmd FileType vimwiki nmap <Leader>wts :call TagSearch()<CR>

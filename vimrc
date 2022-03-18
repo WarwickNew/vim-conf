@@ -102,7 +102,7 @@ set wrap linebreak nolist
 
 "Leader mapping
 let mapleader = "\<Space>"
-nnoremap <Leader>? :echon " n :Lex \n l? lsp help (if implemented in buffer)"<CR>
+nnoremap <Leader>? :echon " n :Lex \n l? lsp help (if implemented in buffer)\n w? vimWiki help"<CR>
 nnoremap <Leader>n :Lex<CR>
 " Load Plugins
 so ~/.vim/plugins.vim
