@@ -119,6 +119,9 @@ endif
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.glsl,*.frag,*.vert set ft=glsl
 
 " Vimwiki
+let g:vimwiki_list = [{'path': '~/.vimwiki/',
+                      \ 'path_html': '~/.vimwiki/HTML'}]
+
 " A little function to insert user input functionality into remaps
 function! TagSearch()
     call inputsave()
