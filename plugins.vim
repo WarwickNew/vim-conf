@@ -54,7 +54,7 @@ if has("termguicolors")
 else
     let g:gruvbox_termcolors=16
 endif
-colorscheme gruvbox
+silent! colorscheme gruvbox
 
 " Plugin leader mappings
 
