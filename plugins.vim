@@ -22,6 +22,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 "Plugin 'dhruvasagar/vim-dotoo'
 Plugin 'vimwiki/vimwiki'
+Plugin 'tools-life/taskwiki'
 Plugin 'sheerun/vim-polyglot'
 " Language C++/glsl
 "Plugin 'ycm-core/YouCompleteMe'
