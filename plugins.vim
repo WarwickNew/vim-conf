@@ -24,6 +24,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'vimwiki/vimwiki'
 Plugin 'tools-life/taskwiki'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
 " Language C++/glsl
 "Plugin 'ycm-core/YouCompleteMe'
 Plugin 'prabirshrestha/vim-lsp'
@@ -135,3 +137,7 @@ endfunction
 
 nmap <Leader>w? :echon " wts search-tags"<CR>
 autocmd FileType vimwiki nmap <Leader>wts :call TagSearch()<CR>
+
+" fzf git find
+nnoremap <Leader>fg :GFiles<CR>
+nnoremap <Leader>ff :Files<CR>
