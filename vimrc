@@ -38,9 +38,9 @@ augroup vimrcEx
 
   " For all text files set 'textwidth' to 78 characters.
   "autocmd FileType text setlocal textwidth=78
-  autocmd FileType vimwiki,tex,text setlocal textwidth=80
-  autocmd FileType vimwiki,tex,text setlocal linebreak
-  autocmd FileType vimwiki,tex,text setlocal spell spelllang=en_gb
+  autocmd FileType asciidoc,vimwiki,tex,text setlocal textwidth=80
+  autocmd FileType asciidoc,vimwiki,tex,text setlocal linebreak
+  autocmd FileType asciidoc,vimwiki,tex,text setlocal spell spelllang=en_gb
 
 
 augroup END
