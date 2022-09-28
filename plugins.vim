@@ -48,6 +48,11 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+"Always show lightline
+set laststatus=2
+set showtabline=2
+set noshowmode
+
 " Gruvbox colours
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_contrast_light='hard'
@@ -67,11 +72,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 " clangd vim lsp
-let g:lsp_settings = {
-\  'clangd': {'cmd': ['clangd-8']},
-\  'efm-langserver': {'disabled': v:false}
-\}
-
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
