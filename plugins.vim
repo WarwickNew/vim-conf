@@ -22,7 +22,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 "Plugin 'dhruvasagar/vim-dotoo'
 Plugin 'vimwiki/vimwiki'
-Plugin 'tools-life/taskwiki'
+"Plugin 'tools-life/taskwiki'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
@@ -62,6 +62,8 @@ if has("termguicolors")
 else
     let g:gruvbox_termcolors=16
 endif
+let g:gruvbox_improved_strings=1
+let g:gruvbox_improved_warnings=1
 silent! colorscheme gruvbox
 
 " Plugin leader mappings
