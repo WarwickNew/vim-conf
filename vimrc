@@ -98,7 +98,7 @@ hi Cursor ctermbg=15
 
 " Make reading easier
 set wrap linebreak nolist
-:set concealcursor=""
+set concealcursor=""
 
 "Leader mapping
 let mapleader = "\<Space>"

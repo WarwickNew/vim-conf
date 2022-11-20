@@ -64,7 +64,7 @@ else
 endif
 let g:gruvbox_improved_strings=1
 let g:gruvbox_improved_warnings=1
-silent! colorscheme gruvbox
+colorscheme gruvbox
 
 " Plugin leader mappings
 
