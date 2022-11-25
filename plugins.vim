@@ -126,7 +126,8 @@ autocmd! BufNewFile,BufRead *.vs,*.fs,*.glsl,*.frag,*.vert set ft=glsl
 " Vimwiki
 let g:vimwiki_list = [{'path': '~/.vimwiki/',
                       \ 'path_html': '~/.vimwiki/HTML',
-                      \ 'auto_diary_index': 1}]
+                      \ 'auto_diary_index': 1,
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " A little function to insert user input functionality into remaps
 function! TagSearch()
