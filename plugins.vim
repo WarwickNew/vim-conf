@@ -32,6 +32,7 @@ Plugin 'prabirshrestha/vim-lsp'
 Plugin 'mattn/vim-lsp-settings'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'tikhomirov/vim-glsl'
+Plugin 'mattn/calendar-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -127,7 +128,10 @@ autocmd! BufNewFile,BufRead *.vs,*.fs,*.glsl,*.frag,*.vert set ft=glsl
 let g:vimwiki_list = [{'path': '~/.vimwiki/',
                       \ 'path_html': '~/.vimwiki/HTML',
                       \ 'auto_diary_index': 1,
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+                      \ 'syntax': 'markdown', 'ext': '.md',
+                      \ 'links_space_char': '_',
+                      \ 'vimwiki_use_calendar': 1}]
+nnoremap <Leader>c :Calendar<CR>
 
 " A little function to insert user input functionality into remaps
 function! TagSearch()
