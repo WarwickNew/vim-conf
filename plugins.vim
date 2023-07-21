@@ -62,7 +62,7 @@ if has("termguicolors")
 else
     let g:gruvbox_termcolors=16
 endif
-let g:gruvbox_improved_strings=1
+"let g:gruvbox_improved_strings=1
 let g:gruvbox_improved_warnings=1
 colorscheme gruvbox
 
@@ -91,6 +91,7 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> <leader>l[g <Plug>(lsp-previous-diagnostic)
     nmap <buffer> <leader>l]g <Plug>(lsp-next-diagnostic)
     nmap <buffer> <leader>lK <plug>(lsp-hover)
+    nmap <buffer> <leader>la <plug>(lsp-code-action-float)
 
     let g:lsp_format_sync_timeout = 1000
     autocmd! BufWritePre *.rs,*.go,*.cpp,*.c,*.h,*.cs,*.js,*.jsx,*.ts call execute('LspDocumentFormatSync')
