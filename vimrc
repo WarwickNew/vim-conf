@@ -103,6 +103,6 @@ set concealcursor=""
 "Leader mapping
 let mapleader = "\<Space>"
 nnoremap <Leader>? :echon " n :Lex \n l? lsp help (if implemented in buffer)\n w? vimWiki help"<CR>
-nnoremap <Leader>n :Lex<CR>
+nnoremap <Leader>n :Sexplore<CR>
 " Load Plugins
 so ~/.vim/plugins.vim
