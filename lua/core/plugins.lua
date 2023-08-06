@@ -37,6 +37,12 @@ local plugins = {
   -- completion
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
+  {
+    "L3MON4D3/LuaSnip",
+    version = "2.*", -- Replace <CurrentMajor> by the latest released major
+    -- install jsregexp (optional!).
+    build = "make install_jsregexp"
+  }
 }
 
 local opts = {}
