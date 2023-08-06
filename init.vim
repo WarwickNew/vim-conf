@@ -16,7 +16,9 @@ if v:progname =~? "evim"
 endif
 
 " Get the defaults that most users want.
-source $VIMRUNTIME/defaults.vim
+if !has('nvim')
+  source $VIMRUNTIME/defaults.vim
+endif
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
@@ -105,4 +107,4 @@ let mapleader = "\<Space>"
 nnoremap <Leader>? :echon " n :Lex \n l? lsp help (if implemented in buffer)\n w? vimWiki help"<CR>
 nnoremap <Leader>n :Sexplore<CR>
 " Load Plugins
-so ~/.vim/plugins.vim
+so plugins.vim

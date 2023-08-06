@@ -1,53 +1,34 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin()
 
 " Pretty
-Plugin 'itchyny/lightline.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'ShowTrailingWhitespace'
-"Plugin 'Yggdroot/indentLine'
+Plug 'itchyny/lightline.vim'
+Plug 'morhetz/gruvbox'
+Plug 'vim-scripts/ShowTrailingWhitespace'
+"Plug 'Yggdroot/indentLine'
 
 " Functional
-Plugin 'tpope/vim-fugitive'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-surround'
-"Plugin 'dhruvasagar/vim-dotoo'
-Plugin 'vimwiki/vimwiki'
-"Plugin 'tools-life/taskwiki'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+"Plug 'dhruvasagar/vim-dotoo'
+Plug 'vimwiki/vimwiki'
+"Plug 'tools-life/taskwiki'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " Language C++/glsl
-"Plugin 'ycm-core/YouCompleteMe'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'mattn/vim-lsp-settings'
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'tikhomirov/vim-glsl'
-Plugin 'mattn/calendar-vim'
+"Plug 'ycm-core/YouCompleteMe'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'tikhomirov/vim-glsl'
+Plug 'mattn/calendar-vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#end()
+
 
 "Always show lightline
 set laststatus=2
@@ -65,6 +46,7 @@ else
 endif
 "let g:gruvbox_improved_strings=1
 let g:gruvbox_improved_warnings=1
+let g:gruvbox_italic=1
 colorscheme gruvbox
 
 " Plugin leader mappings
