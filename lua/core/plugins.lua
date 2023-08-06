@@ -42,7 +42,9 @@ local plugins = {
     version = "2.*", -- Replace <CurrentMajor> by the latest released major
     -- install jsregexp (optional!).
     build = "make install_jsregexp"
-  }
+  },
+  'saadparwaiz1/cmp_luasnip',
+  'rafamadriz/friendly-snippets'
 }
 
 local opts = {}
