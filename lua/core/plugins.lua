@@ -18,6 +18,10 @@ local plugins = {
   'nvim-tree/nvim-web-devicons',
   'nvim-lualine/lualine.nvim',
   'nvim-treesitter/nvim-treesitter',
+  {'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  },
   -- fzf
   {
     'nvim-telescope/telescope.nvim',
