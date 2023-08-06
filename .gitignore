@@ -5,3 +5,4 @@ doc
 plugin
 bundle
 !bundle/Vundle.vim
+lazy-lock.json
