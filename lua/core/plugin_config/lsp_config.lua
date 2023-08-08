@@ -4,8 +4,8 @@ require("mason-lspconfig").setup({
 })
 -- gloabal mappings
 vim.keymap.set('n', '<leader>le', vim.diagnostic.open_float)
---vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
---vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<leader>ln', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<leader>lN', vim.diagnostic.goto_prev)
 vim.keymap.set('n', '<leader>lj', vim.diagnostic.setloclist)
 
 vim.api.nvim_create_autocmd('LspAttach', {
