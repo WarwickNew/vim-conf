@@ -22,6 +22,7 @@ local plugins = {
     event = "InsertEnter",
     opts = {} -- this is equalent to setup({}) function
   },
+  'akinsho/toggleterm.nvim',
   -- fzf
   {
     'nvim-telescope/telescope.nvim',
