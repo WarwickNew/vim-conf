@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = {"lua_ls", "clangd", "cmake", "ltex"}
+  ensure_installed = { "lua_ls", "clangd", "cmake", "ltex" }
 })
 -- gloabal mappings
 vim.keymap.set('n', '<leader>le', vim.diagnostic.open_float)
@@ -27,10 +27,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
     --vim.keymap.set('n', '<space>wl', function()
     --  print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     --end, opts)
-    vim.keymap.set('n', '<leader>ltd', vim.lsp.buf.type_definition, opts)
-    vim.keymap.set('n', '<leader>lrn', vim.lsp.buf.rename, opts)
+    vim.keymap.set('n', '<leader>lt', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', '<leader>lR', vim.lsp.buf.rename, opts)
     vim.keymap.set({ 'n', 'v' }, '<leader>la', vim.lsp.buf.code_action, opts)
-    vim.keymap.set('n', '<leader>lrf', vim.lsp.buf.references, opts)
+    vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references, opts)
     vim.keymap.set('n', '<space>lf', function()
       vim.lsp.buf.format { async = true }
     end, opts)
@@ -54,6 +54,7 @@ require("lspconfig").lua_ls.setup {
       workspace = {
         -- Make the server aware of Neovim runtime files
         library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
       },
       -- Do not send telemetry data containing a randomized but unique identifier
       telemetry = {
@@ -62,6 +63,6 @@ require("lspconfig").lua_ls.setup {
     },
   },
 }
-require("lspconfig").clangd.setup {capabilities = capabilities}
-require("lspconfig").cmake.setup {capabilities = capabilities}
-require("lspconfig").ltex.setup {capabilities = capabilities}
+require("lspconfig").clangd.setup { capabilities = capabilities }
+require("lspconfig").cmake.setup { capabilities = capabilities }
+require("lspconfig").ltex.setup { capabilities = capabilities }

@@ -23,6 +23,10 @@ local plugins = {
     opts = {} -- this is equalent to setup({}) function
   },
   'akinsho/toggleterm.nvim',
+  {
+    'AckslD/nvim-whichkey-setup.lua',
+    dependencies = {'liuchengxu/vim-which-key'},
+  },
   -- fzf
   {
     'nvim-telescope/telescope.nvim',
