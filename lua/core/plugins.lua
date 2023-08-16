@@ -18,20 +18,26 @@ local plugins = {
   'nvim-tree/nvim-web-devicons',
   'nvim-lualine/lualine.nvim',
   'nvim-treesitter/nvim-treesitter',
-  {'windwp/nvim-autopairs',
+  {
+    'windwp/nvim-autopairs',
     event = "InsertEnter",
     opts = {} -- this is equalent to setup({}) function
   },
   'akinsho/toggleterm.nvim',
   {
-    'AckslD/nvim-whichkey-setup.lua',
-    dependencies = {'liuchengxu/vim-which-key'},
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
   },
+  "lukas-reineke/indent-blankline.nvim",
   -- fzf
   {
     'nvim-telescope/telescope.nvim',
     branch = "0.1.x",
-    dependencies = {{'nvim-lua/plenary.nvim'}}
+    dependencies = { { 'nvim-lua/plenary.nvim' } }
   },
   -- Lsp
   {

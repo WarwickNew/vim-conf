@@ -14,3 +14,6 @@ vim.opt.tabstop = 2 -- Seems to be default for most lsp's now
 vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
+
+-- line numbers are handy
+vim.opt.number = true

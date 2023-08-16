@@ -1,35 +1,31 @@
-local whichkey = require("whichkey_setup")
--- lsp format
-vim.g.formatfix = function()
-  vim.lsp.buf.format { async = true }
-end
+local whichkey = require("which-key")
 -- TODO fix <cmd> based instructions
 local keymap = {
   t = 'Toggle Terminal',
   l = {
     name = '+lsp',
-    e = { "vim.diagnostic.open_float", 'Diagnostic Float' },
-    n = { "vim.diagnostic.goto_next", 'Next Diagnostic' },
-    N = { "vim.diagnostic.goto_prev", 'Previous Diagnostic' },
-    j = { "vim.diagnostic.setloclist", 'Diagnostic List' },
+    e = { "<cmd>lua vim.diagnostic.open_float()<cr>", 'Diagnostic Float' },
+    n = { "<cmd>lua vim.diagnostic.goto_next()<cr>", 'Next Diagnostic' },
+    N = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", 'Previous Diagnostic' },
+    j = { "<cmd>lua vim.diagnostic.setloclist()<cr>", 'Diagnostic List' },
     --- Dynamic to each buffer potential TODO?
-    D = { "vim.lsp.buf.declaration", 'Declaration' },
-    d = { "vim.lsp.buf.definition", 'Definition' },
-    k = { "vim.lsp.buf.hover", 'Hover' },
-    i = { "vim.lsp.buf.implementation", 'Implementation' },
-    t = { "vim.lsp.buf.type_definition", 'Type Definition' },
-    R = { "vim.lsp.buf.rename", 'Rename' },
-    a = { "vim.lsp.buf.code_action", 'Code Action' },
-    r = { "vim.lsp.buf.references", 'References' },
-    f = { "<cmd>lua vim.g.formatfix()<CR>", 'Format' },
+    D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", 'Declaration' },
+    d = { "<cmd>lua vim.lsp.buf.definition()<cr>", 'Definition' },
+    k = { "<cmd>lua vim.lsp.buf.hover()<cr>", 'Hover' },
+    i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", 'Implementation' },
+    t = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", 'Type Definition' },
+    R = { "<cmd>lua vim.lsp.buf.rename()<cr>", 'Rename' },
+    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", 'Code Action' },
+    r = { "<cmd>lua vim.lsp.buf.references()<cr>", 'References' },
+    f = { function() vim.lsp.buf.format { async = true } end, 'Format' },
 
   },
   f = {
     name = '+find (telescope)',
-    f = {"<cmd>Telescope find_files<CR>",'Find'},
-    o = {"<cmd>Telescope oldfiles<CR>",'Old Files'},
-    g = {"<cmd>Telescope live_grep<CR>",'Grep'},
-    h = {"<cmd>Telescope help_tags<CR>",'Help Tags'},
+    f = { "<cmd>Telescope find_files<CR>", 'Find' },
+    o = { "<cmd>Telescope oldfiles<CR>", 'Old Files' },
+    g = { "<cmd>Telescope live_grep<CR>", 'Grep' },
+    h = { "<cmd>Telescope help_tags<CR>", 'Help Tags' },
   },
   g = {
     name = '+git',
@@ -39,7 +35,7 @@ local keymap = {
   }
 }
 
-whichkey.config {
+whichkey.setup {
   hide_statusline = false,
   default_keymap_settings = {
     silent = true,
@@ -48,4 +44,4 @@ whichkey.config {
   default_mode = 'n',
 }
 
-whichkey.register_keymap('leader', keymap)
+whichkey.register(keymap, { prefix = '<leader>' })
