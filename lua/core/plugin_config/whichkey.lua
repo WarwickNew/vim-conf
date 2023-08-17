@@ -33,6 +33,13 @@ local keymap = {
     b = { '<Cmd>Telescope git_branches<CR>', 'Branches' },
     s = { '<Cmd>Telescope git_status<CR>', 'Status' },
   },
+  T = {
+    name = '+todo',
+    j = { '<Cmd>TodoLocList<CR>', 'List TODO:\'s in buffer' },
+    T = { '<Cmd>TodoTelescope<CR>', 'Search TODO:\'s' },
+    n = {function() require("todo-comments").jump_next() end, 'Jump to next TODO:' },
+    N = {function() require("todo-comments").jump_prev() end, 'Jump to previous TODO:' },
+  },
   w = {
     name = '+window',
     w = 'Pick Window',
@@ -54,7 +61,7 @@ local keymap = {
   }
 }
 -- Map window keys to leader w
-vim.cmd[[nmap <leader>w <C-w>]]
+vim.cmd [[nmap <leader>w <C-w>]]
 
 whichkey.setup {
   hide_statusline = false,

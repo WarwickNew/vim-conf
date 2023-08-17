@@ -24,6 +24,7 @@ local plugins = {
     opts = {} -- this is equalent to setup({}) function
   },
   'akinsho/toggleterm.nvim',
+  -- keybind tooltip
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
@@ -38,6 +39,12 @@ local plugins = {
     'nvim-telescope/telescope.nvim',
     branch = "0.1.x",
     dependencies = { { 'nvim-lua/plenary.nvim' } }
+  },
+  -- TODO
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {}
   },
   -- Lsp
   {
