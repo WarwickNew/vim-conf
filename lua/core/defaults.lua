@@ -17,3 +17,6 @@ vim.opt.expandtab = true
 
 -- line numbers are handy
 vim.opt.number = true
+
+-- Use LSP to format bufer automatically just before write
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
