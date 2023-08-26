@@ -19,4 +19,9 @@ vim.opt.expandtab = true
 vim.opt.number = true
 
 -- Use LSP to format bufer automatically just before write
-vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+vim.api.nvim_create_autocmd("BufWritePre", {
+  buffer = buffer,
+  callback = function()
+    vim.lsp.buf.format { async = false }
+  end
+})
