@@ -18,6 +18,11 @@ vim.opt.expandtab = true
 -- line numbers are handy
 vim.opt.number = true
 
+-- I want to be able to read long lines nicely
+vim.wo.wrap = true
+vim.wo.linebreak = true
+vim.wo.list = false
+
 -- Use LSP to format bufer automatically just before write
 --vim.api.nvim_create_autocmd("BufWritePre", {
 --  buffer = buffer,
