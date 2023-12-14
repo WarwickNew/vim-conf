@@ -58,6 +58,12 @@ local keymap = {
     l = "Go to the right window",
     k = "Go to the up window",
     j = "Go to the down window",
+  },
+  o = {
+    name = '+org mode',
+  },
+  m = {
+    '<Cmd>DarkLightSwitch<CR>', 'Toggle dark mode'
   }
 }
 -- Map window keys to leader w

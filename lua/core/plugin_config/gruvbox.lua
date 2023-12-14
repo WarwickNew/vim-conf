@@ -1,6 +1,31 @@
-vim.o.termguicolors = true
-vim.g.gruvbox_contrast_dark = 'hard'
-vim.g.gruvbox_contrast_light = 'hard'
-vim.g.gruvbox_improved_strings = 1
-vim.g.gruvbox_improved_warnings = 1
-vim.cmd [[colorscheme gruvbox]]
+require("gruvbox").setup({
+  terminal_colors = true, -- add neovim terminal colors
+  undercurl = true,
+  underline = true,
+  bold = true,
+  italic = {
+    strings = true,
+    emphasis = true,
+    comments = true,
+    operators = false,
+    folds = true,
+  },
+  strikethrough = true,
+  invert_selection = false,
+  invert_signs = false,
+  invert_tabline = false,
+  invert_intend_guides = false,
+  inverse = true,    -- invert background for search, diffs, statuslines and errors
+  contrast = "hard", -- can be "hard", "soft" or empty string
+  palette_overrides = { 
+    light0_hard = '#ffffff',
+    light1 = '#f2f2f2',
+    light2 = '#e3e3e3',
+    light3 = '#d1d1d1',
+    light4 = '#c3c3c3',
+  },
+  overrides = {},
+  dim_inactive = false,
+  transparent_mode = false,
+})
+vim.cmd("colorscheme gruvbox")
