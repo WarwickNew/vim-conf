@@ -23,6 +23,9 @@ vim.wo.wrap = true
 vim.wo.linebreak = true
 vim.wo.list = false
 
+-- I want neovim to know I want british spellings
+vim.cmd('language en_GB.utf8')
+
 -- Use LSP to format bufer automatically just before write
 --vim.api.nvim_create_autocmd("BufWritePre", {
 --  buffer = buffer,

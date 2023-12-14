@@ -69,12 +69,12 @@ local plugins = {
     dependencies = {
       { 'nvim-treesitter/nvim-treesitter', lazy = true },
     },
-    event = 'VeryLazy',
-    config = function()
-      -- Load treesitter grammar for org
-      require('orgmode').setup_ts_grammar()
+    --event = 'VeryLazy',
+    --config = function()
+      ---- Load treesitter grammar for org
+      --require('orgmode').setup_ts_grammar()
 
-      -- Setup treesitter
+      ---- Setup treesitter
       --require('nvim-treesitter.configs').setup({
       --  highlight = {
       --    enable = true,
@@ -83,16 +83,16 @@ local plugins = {
       --  ensure_installed = { 'org' },
       --})
 
-      -- Setup orgmode
-      require('orgmode').setup({
-        org_agenda_files = '~/.vimwiki/**/*',
-        org_default_notes_file = '~/.vimwiki/refile.org',
-      })
-      -- Setup nvim-cmp
-      require('cmp').setup({
-        sources = { { name = 'orgmode' } }
-      })
-    end,
+      ---- Setup orgmode
+      --require('orgmode').setup({
+      --  org_agenda_files = '~/.vimwiki/**/*',
+      --  org_default_notes_file = '~/.vimwiki/refile.org',
+      --})
+      ---- Setup nvim-cmp
+      --require('cmp').setup({
+      --  sources = { { name = 'orgmode' } }
+      --})
+    --end,
   }
 }
 
