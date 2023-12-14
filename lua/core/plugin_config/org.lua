@@ -15,8 +15,8 @@ require('nvim-treesitter.configs').setup {
 }
 
 require('orgmode').setup({
-  org_agenda_files = {'~/.vimwiki/**.org'},
-  org_default_notes_file = '~/.vimwiki/refile.org',
+  org_agenda_files = {'~/.vimwiki/org/**.org'},
+  org_default_notes_file = '~/.vimwiki/org/refile.org',
 })
 
 require('cmp').setup({
@@ -24,3 +24,8 @@ require('cmp').setup({
     { name = 'orgmode' }
   }
 })
+
+require("orgWiki").setup {
+  wiki_path = { "~/.vimwiki/org/" },
+  diary_path = "~/.vimwiki/org/diary/",
+}

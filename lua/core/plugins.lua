@@ -70,6 +70,10 @@ local plugins = {
       { 'nvim-treesitter/nvim-treesitter', lazy = true },
     },
   },
+  {
+    "ranjithshegde/orgWiki.nvim",
+    dependencies = { { 'nvim-orgmode/orgmode' } },
+  },
   -- Lightmode switcher
   'eliseshaffer/darklight.nvim'
 }
