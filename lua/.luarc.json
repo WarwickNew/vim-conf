@@ -1,0 +1,24 @@
+{
+    "workspace.library": [
+        "/home/warwick/.config/nvim",
+        "/home/warwick/.local/share/nvim/lazy/lazy.nvim",
+        "/home/warwick/.local/share/nvim/lazy/nvim-treesitter",
+        "/home/warwick/.local/share/nvim/lazy/nvim-tree.lua",
+        "/home/warwick/.local/share/nvim/lazy/nvim-cmp",
+        "/home/warwick/.local/share/nvim/lazy/plenary.nvim",
+        "/home/warwick/.local/share/nvim/lazy/telescope.nvim",
+        "/home/warwick/.local/share/nvim/lazy/nvim-web-devicons",
+        "/home/warwick/.local/share/nvim/lazy/cmp-nvim-lsp",
+        "/home/warwick/.local/share/nvim/lazy/lualine.nvim",
+        "/home/warwick/.local/share/nvim/lazy/nvim-lspconfig",
+        "/home/warwick/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/home/warwick/.local/share/nvim/lazy/gruvbox.nvim",
+        "/home/warwick/.local/share/nvim/lazy/mason.nvim",
+        "/usr/share/nvim/runtime",
+        "/usr/share/nvim/runtime/pack/dist/opt/matchit",
+        "/usr/lib/nvim",
+        "/home/warwick/.local/state/nvim/lazy/readme",
+        "/home/warwick/.local/share/nvim/lazy/cmp-nvim-lsp/after",
+        "${3rd}/luassert/library"
+    ]
+}

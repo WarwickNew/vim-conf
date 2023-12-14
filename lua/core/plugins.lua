@@ -33,7 +33,7 @@ local plugins = {
       vim.o.timeoutlen = 300
     end,
   },
-  "lukas-reineke/indent-blankline.nvim",
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
   -- fzf
   {
     'nvim-telescope/telescope.nvim',
@@ -62,7 +62,38 @@ local plugins = {
     build = "make install_jsregexp"
   },
   'saadparwaiz1/cmp_luasnip',
-  'rafamadriz/friendly-snippets'
+  'rafamadriz/friendly-snippets',
+  -- Org Mode
+  {
+    'nvim-orgmode/orgmode',
+    dependencies = {
+      { 'nvim-treesitter/nvim-treesitter', lazy = true },
+    },
+    event = 'VeryLazy',
+    config = function()
+      -- Load treesitter grammar for org
+      require('orgmode').setup_ts_grammar()
+
+      -- Setup treesitter
+      --require('nvim-treesitter.configs').setup({
+      --  highlight = {
+      --    enable = true,
+      --    additional_vim_regex_highlighting = { 'org' },
+      --  },
+      --  ensure_installed = { 'org' },
+      --})
+
+      -- Setup orgmode
+      require('orgmode').setup({
+        org_agenda_files = '~/.vimwiki/**/*',
+        org_default_notes_file = '~/.vimwiki/refile.org',
+      })
+      -- Setup nvim-cmp
+      require('cmp').setup({
+        sources = { { name = 'orgmode' } }
+      })
+    end,
+  }
 }
 
 local opts = {}
