@@ -23,6 +23,9 @@ vim.wo.wrap = true
 vim.wo.linebreak = true
 vim.wo.list = false
 
+-- Hide extra doc formatting unless my cursor is over it
+vim.opt.conceallevel = 2
+
 -- I want neovim to know I want british spellings
 vim.cmd('language en_GB.utf8')
 
