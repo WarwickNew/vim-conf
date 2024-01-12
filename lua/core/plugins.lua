@@ -71,6 +71,10 @@ local plugins = {
     },
   },
   {
+    'akinsho/org-bullets.nvim',
+    dependencies = { { 'nvim-orgmode/orgmode' } },
+  },
+  {
     "ranjithshegde/orgWiki.nvim",
     dependencies = { { 'nvim-orgmode/orgmode' } },
   },
