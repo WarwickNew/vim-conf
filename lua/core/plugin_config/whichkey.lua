@@ -37,8 +37,8 @@ local keymap = {
     name = '+todo',
     j = { '<Cmd>TodoLocList<CR>', 'List TODO:\'s in buffer' },
     T = { '<Cmd>TodoTelescope<CR>', 'Search TODO:\'s' },
-    n = {function() require("todo-comments").jump_next() end, 'Jump to next TODO:' },
-    N = {function() require("todo-comments").jump_prev() end, 'Jump to previous TODO:' },
+    n = { function() require("todo-comments").jump_next() end, 'Jump to next TODO:' },
+    N = { function() require("todo-comments").jump_prev() end, 'Jump to previous TODO:' },
   },
   w = {
     name = '+window',
@@ -64,6 +64,25 @@ local keymap = {
   },
   m = {
     '<Cmd>DarkLightSwitch<CR>', 'Toggle dark mode'
+  },
+  v = {
+    name = '+obsidian Vault',
+    i = {'<Cmd>e ~/Sync/wiki/index.md<CR>', 'Open Index'},
+    o = {'<Cmd>ObsidianOpen<CR>', 'Obsidian Open'},
+    n = {'<Cmd>ObsidianNew<CR>', 'New Note'},
+    q = {'<Cmd>ObsidianQuickSwitch<CR>', 'Quick Switch with fzf'},
+    f = {'<Cmd>ObsidianFollowLink<CR>', 'Follow Link'},
+    b = {'<Cmd>ObsidianBacklinks<CR>', 'List Backlinks'},
+    d = {'<Cmd>ObsidianToday<CR>', 'Open Daily Note'},
+    y = {'<Cmd>ObsidianYesterday<CR>', 'Open Yesterdays Note'},
+    t = {'<Cmd>ObsidianTomorrow<CR>', 'Open Tomorrows Note'},
+    T = {'<Cmd>ObsidianTemplate<CR>', 'Open Template'},
+    s = {'<Cmd>ObsidianSearch<CR>', 'Search Notes'},
+    l = {'<Cmd>ObsidianLink<CR>', 'Link Current Selection'},
+    L = {'<Cmd>ObsidianLinkNew<CR>', 'Link New Note from Current Selection'},
+    w = {'<Cmd>ObsidianWorkspace<CR>', 'Switch Workspace'},
+    p = {'<Cmd>ObsidianPasteImg<CR>', 'Paste Image'},
+    r = {'<Cmd>ObsidianRename<CR>', 'Rename Note'},
   }
 }
 -- Map window keys to leader w

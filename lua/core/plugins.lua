@@ -37,7 +37,7 @@ local plugins = {
   -- fzf
   {
     'nvim-telescope/telescope.nvim',
-    branch = "0.1.x",
+    --branch = "0.1.x",
     dependencies = { { 'nvim-lua/plenary.nvim' } }
   },
   -- TODO
@@ -77,6 +77,16 @@ local plugins = {
   {
     "ranjithshegde/orgWiki.nvim",
     dependencies = { { 'nvim-orgmode/orgmode' } },
+  },
+  -- Obsidian
+  {
+    "epwalsh/obsidian.nvim",
+    version = "*",
+    lazy = true,
+    ft = "markdown",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
   },
   -- Lightmode switcher
   'eliseshaffer/darklight.nvim'
