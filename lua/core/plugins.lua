@@ -89,7 +89,20 @@ local plugins = {
     },
   },
   -- Lightmode switcher
-  'eliseshaffer/darklight.nvim'
+  'eliseshaffer/darklight.nvim',
+  -- Mini tools
+  {
+    'echasnovski/mini.animate',
+    version = false,
+    config = function()
+      local animate = require('mini.animate')
+      animate.setup({
+        scroll = { timing = animate.gen_timing.linear({ duration = 50, unit = 'total' }) },
+        cursor = { enable = false }
+      })
+    end
+
+  }
 }
 
 local opts = {}
