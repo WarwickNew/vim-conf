@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "clangd", "cmake", "ltex", "tsserver", "rust_analyzer" }
+  ensure_installed = { "lua_ls", "clangd", "cmake", "ltex", "tsserver", "jsonls", "rust_analyzer" }
 })
 -- gloabal mappings
 vim.keymap.set('n', '<leader>le', vim.diagnostic.open_float)
@@ -67,4 +67,5 @@ require("lspconfig").clangd.setup { capabilities = capabilities }
 require("lspconfig").cmake.setup { capabilities = capabilities }
 require("lspconfig").ltex.setup { capabilities = capabilities }
 require("lspconfig").tsserver.setup { capabilities = capabilities }
+require("lspconfig").jsonls.setup { capabilities = capabilities }
 require("lspconfig").rust_analyzer.setup { capabilities = capabilities }
