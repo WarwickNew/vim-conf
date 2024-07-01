@@ -111,6 +111,7 @@ local plugins = {
     end
 
   },
+  -- Git tooling
   {
     "kdheepak/lazygit.nvim",
     cmd = {
@@ -123,6 +124,9 @@ local plugins = {
     dependencies = {
       "nvim-lua/plenary.nvim",
     }
+  },
+  {
+    "sindrets/diffview.nvim"
   }
 }
 
